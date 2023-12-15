@@ -31,7 +31,7 @@ public class MagazinesDAO {
 
 
     public void findByIdAndDelete(long id) {
-        // 1. Cerco lo studente in db
+
         Magazines found = this.findByid(id);
 
         if (found != null) {
@@ -47,7 +47,7 @@ public class MagazinesDAO {
             System.out.println("rivista" + found.getTitle() + " eliminata correttamente!");
 
         } else {
-            // 3. Se non c'è --> "Non trovato"
+
             System.out.println("la rivista con l'id " + id + " non è stata trovato");
         }
     }

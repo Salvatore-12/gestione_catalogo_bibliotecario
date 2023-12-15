@@ -1,57 +1,54 @@
 package SalvatoreAssennato.DAO;
 
-import SalvatoreAssennato.Entities.Books;
+import SalvatoreAssennato.Entities.Magazines;
+import SalvatoreAssennato.Entities.User;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
-public class BooksDAO {
+public class UserDAO {
     private final EntityManager em;
 
-    public BooksDAO(EntityManager em) {
+    public UserDAO(EntityManager em) {
         this.em = em;
     }
 
-    // metodo per salvare
-    public void save(Books books) {
+    public void save(User user) {
 
         EntityTransaction transaction = em.getTransaction();
 
         transaction.begin();
 
-        em.persist(books);
+        em.persist(user);
 
         transaction.commit();
     }
 
-    // metodo per ricercare per id
-    public Books findByid(long id) {
-        return em.find(Books.class, id);
+
+    public User findByid(long id) {
+        return em.find(User.class, id);
     }
 
 
     public void findByIdAndDelete(long id) {
 
-        Books found = this.findByid(id);
+       User found = this.findByid(id);
 
         if (found != null) {
-
-
 
             EntityTransaction transaction = em.getTransaction();
 
             transaction.begin();
 
-
             em.remove(found);
-
 
             transaction.commit();
 
-            System.out.println("libro " + found.getTitle() + " eliminato correttamente!");
+            System.out.println("utente" + found.getNumberCard_id() + " eliminato correttamente!");
 
         } else {
 
-            System.out.println("il libro con l'id " + id + " non è stato trovato");
+            System.out.println("l'utente con l'id " + id + " non è stato trovato");
         }
     }
 }
