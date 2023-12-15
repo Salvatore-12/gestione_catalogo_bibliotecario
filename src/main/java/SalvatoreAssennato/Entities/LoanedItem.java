@@ -8,14 +8,14 @@ import java.time.LocalDate;
 public abstract class LoanedItem {
     @Id
     @GeneratedValue
-    private long id;
+    protected long id;
 
     @Column(name="titolo")
-    private String title;
+    protected String title;
     @Column(name="anno_pubblicazione")
-    private LocalDate yearPublished;
+    protected LocalDate yearPublished;
     @Column(name="numero_pagina")
-    private int numberPage;
+    protected int numberPage;
 
     public LoanedItem() {
     }

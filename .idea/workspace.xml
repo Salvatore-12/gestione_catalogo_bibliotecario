@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="684324cc-6f0c-4c78-af4d-cdc15260aa14" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/SalvatoreAssennato/Entities/Books.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SalvatoreAssennato/Entities/Geners.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SalvatoreAssennato/Entities/LoanedItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="684324cc-6f0c-4c78-af4d-cdc15260aa14" name="Changes" comment="creazione classe padre e creazione prima classe figlia">
+      <change afterPath="$PROJECT_DIR$/src/main/java/SalvatoreAssennato/Entities/Magazines.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SalvatoreAssennato/Entities/Periodicity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SalvatoreAssennato/Entities/Books.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SalvatoreAssennato/Entities/Books.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SalvatoreAssennato/Entities/LoanedItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SalvatoreAssennato/Entities/LoanedItem.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +49,19 @@
       <option name="presentableId" value="Default" />
       <updated>1702637128705</updated>
     </task>
+    <task id="LOCAL-00001" summary="creazione classe padre e creazione prima classe figlia">
+      <option name="closed" value="true" />
+      <created>1702640380417</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702640380417</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="creazione classe padre e creazione prima classe figlia" />
+    <option name="LAST_COMMIT_MESSAGE" value="creazione classe padre e creazione prima classe figlia" />
   </component>
 </project>
