@@ -1,14 +1,13 @@
 package SalvatoreAssennato.Entities;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name="riviste")
+@DiscriminatorValue("riviste")
 public class Magazines extends LoanedItem{
     @Column(name="periodicità")
+    @Enumerated(EnumType.STRING)
     private Periodicity periodicity;
     public Magazines(){}
     public Magazines(String title, LocalDate yearPublished, int numberPage, Periodicity periodicity) {
