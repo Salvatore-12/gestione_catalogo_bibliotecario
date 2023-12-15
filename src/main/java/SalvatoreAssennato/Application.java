@@ -21,10 +21,19 @@ public class Application {
 
         Books il_Signore_Degli_Anelli=new Books("le due torri", LocalDate.of(2004,2,4),700,"J. R. R. Tolkien", Geners.FANTASY);
         //bd.save(il_Signore_Degli_Anelli);
+        Books book_Hoobit=new Books("lo Hobbit",LocalDate.of(2000,3,15),500,"J. R. R. Tolkien",Geners.FANTASY);
+        //bd.save(book_Hoobit);
         Magazines rivistaHorror=new Magazines("the dark side",LocalDate.of(1991,1,12),200,Periodicity.SETTIMANALE);
         md.save(rivistaHorror);
+        Magazines rivistCuriosita=new Magazines("Focus",LocalDate.of(2018,4,15),200,Periodicity.MENSILE);
+        md.save(rivistCuriosita);
+
+
         User Luca=new User("Luca","Bianchi",LocalDate.of(2002,8,24));
-        ud.save(Luca);
+        //ud.save(Luca);
+
+        User Marco=new User("Marco","Rossi",LocalDate.of(2003,5,12));
+        //ud.save(Marco);
 
         em.close();
         emf.close();

@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@DiscriminatorValue("riviste")
+@Table(name="riviste")
 public class Magazines extends LoanedItem{
     @Column(name="periodicità")
     @Enumerated(EnumType.STRING)
