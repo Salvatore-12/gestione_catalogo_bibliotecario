@@ -15,7 +15,7 @@ public class Loan {
     private User user;
     @ManyToOne
     @JoinColumn(name="isbn_code",nullable = false)
-    private Publication publication;
+    private LoanedItem loanedItem;
     @Column(name = "start_date",nullable = false)
     private LocalDate startDate;
     @Column(name = "due_date")
@@ -27,9 +27,9 @@ public class Loan {
 
     }
 
-    public Loan(User user, Publication publication, LocalDate startDate, LocalDate expectedDate, LocalDate returnDate) {
+    public Loan(User user, LoanedItem loanedItem , LocalDate startDate, LocalDate expectedDate, LocalDate returnDate) {
         this.user = user;
-        this.publication = publication;
+        this.loanedItem = loanedItem;
         this.startDate = startDate;
         this.expectedDate = expectedDate;
         this.returnDate = returnDate;
@@ -47,12 +47,11 @@ public class Loan {
         this.user = user;
     }
 
-    public Publication getPublication() {
-        return publication;
+    public LoanedItem getLoanedItem() {
+        return loanedItem;
     }
-
-    public void setPublication(Publication publication) {
-        this.publication = publication;
+    public void setLoanedItem(LoanedItem loanedItem) {
+        this.loanedItem = loanedItem;
     }
 
     public LocalDate getStartDate() {
@@ -84,7 +83,7 @@ public class Loan {
         return "Loan{" +
                 "Id=" + Id +
                 ", user=" + user +
-                ", publication=" + publication +
+                ", loanedItem=" + loanedItem +
                 ", startDate=" + startDate +
                 ", expectedDate=" + expectedDate +
                 ", returnDate=" + returnDate +

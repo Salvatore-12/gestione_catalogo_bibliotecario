@@ -1,6 +1,5 @@
 package SalvatoreAssennato.DAO;
 
-import SalvatoreAssennato.Entities.Books;
 import SalvatoreAssennato.Entities.Magazines;
 
 import javax.persistence.EntityManager;
@@ -12,7 +11,6 @@ public class MagazinesDAO {
     public MagazinesDAO(EntityManager em) {
         this.em = em;
     }
-
     public void save(Magazines magazines) {
 
         EntityTransaction transaction = em.getTransaction();
@@ -24,11 +22,9 @@ public class MagazinesDAO {
         transaction.commit();
     }
 
-
     public Magazines findByid(long id) {
         return em.find(Magazines.class, id);
     }
-
 
     public void findByIdAndDelete(long id) {
 

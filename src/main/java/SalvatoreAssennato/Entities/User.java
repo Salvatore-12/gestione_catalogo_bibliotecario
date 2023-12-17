@@ -57,6 +57,10 @@ public class User {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public List<Loan> getListOfLoans() {
+        return listOfLoans;
+    }
+
     @Override
     public String toString() {
         return "User{" +

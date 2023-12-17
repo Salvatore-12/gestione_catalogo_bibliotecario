@@ -1,60 +1,52 @@
 package SalvatoreAssennato.DAO;
 
-import SalvatoreAssennato.Entities.Books;
+import SalvatoreAssennato.Entities.Loan;
+import SalvatoreAssennato.Entities.LoanedItem;
+import SalvatoreAssennato.Entities.Magazines;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.TypedQuery;
-import java.util.List;
 
-public class BooksDAO {
+public class LoanDAO {
     private final EntityManager em;
 
-    public BooksDAO(EntityManager em) {
+    public LoanDAO(EntityManager em) {
         this.em = em;
     }
-
-    // metodo per salvare
-    public void save(Books books) {
+    public void save(Loan loan) {
 
         EntityTransaction transaction = em.getTransaction();
 
         transaction.begin();
 
-        em.persist(books);
+        em.persist(loan);
 
         transaction.commit();
     }
 
-    // metodo per ricercare per id
-    public Books findByid(long id) {
-        return em.find(Books.class, id);
+    public Loan findByid(long id) {
+        return em.find(Loan.class, id);
     }
-
 
     public void findByIdAndDelete(long id) {
 
-        Books found = this.findByid(id);
+        Loan found = this.findByid(id);
 
         if (found != null) {
-
-
 
             EntityTransaction transaction = em.getTransaction();
 
             transaction.begin();
 
-
             em.remove(found);
-
 
             transaction.commit();
 
-            System.out.println("libro " + found.getTitle() + " eliminato correttamente!");
+            System.out.println("il prestito con ISBN" + found.getLoanedItem() + " è stato eliminato correttamente!");
 
         } else {
 
-            System.out.println("il libro con l'id " + id + " non è stato trovato");
+            System.out.println("il prestito con l'id" + id + " non è stata trovato");
         }
     }
-
 }

@@ -1,6 +1,6 @@
 package SalvatoreAssennato.DAO;
 
-import SalvatoreAssennato.Entities.Magazines;
+
 import SalvatoreAssennato.Entities.User;
 
 import javax.persistence.EntityManager;

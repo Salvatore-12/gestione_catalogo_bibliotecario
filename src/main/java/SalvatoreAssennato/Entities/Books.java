@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name="libri")
+
 public class Books extends LoanedItem {
     @Column(name="autore")
     private String author;
